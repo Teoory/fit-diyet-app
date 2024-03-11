@@ -24,7 +24,9 @@ Total code lines: https://api.github.com/repos/Teoory/fit-diyet-app/languages
 ### V1.1.1 (BETA)
 - Ana Yemek Ekleme
   - Yemeğin içeriklerini vb ekleme
-  - Yemeğin tarifini paylaşma
+  - Yemeğin tarifini ekleme
+- Yüyecek ekleme
+  - Meyve, sebze vb her türlü tekil ürün eklenebilir
 - Menu Ekleme
   - Eklenmiş yemekler, meyveler, kahvaltılıklar vb arasından menu oluşturma
   - Menudeki ürünlerin toplam kalori hesabı

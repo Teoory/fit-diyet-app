@@ -6,13 +6,25 @@ import PublicRoutes from './PublicRoutes';
 
 const AppRoutes = () => {
     const { userInfo } = useContext(UserContext);
+    const username = userInfo?.username;
+    
+    // if (!username === undefined) {
+    //     fetch('http://localhost:3030/profile', {
+    //         credentials: 'include'
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         if (data.username) {
+    //             userInfo.setUserInfo(data);
+    //         }
+    //     });
+    // }
     useEffect(() => {
         fetch('http://localhost:3030/profile', {
             credentials: 'include'
         });
     }, []);
 
-    const username = userInfo?.username;
 
   return (
     <>

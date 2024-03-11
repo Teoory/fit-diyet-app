@@ -7,8 +7,19 @@ import './Header.css';
 
 const Header = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
+  const username = userInfo?.username;
   const [ showDropdown, setShowDropdown ] = useState(false);
   const [ profilePhoto, setProfilePhoto ] = useState(null);
+
+  // if (!username === undefined) {
+  //   fetch('http://localhost:3030/profile', {
+  //     credentials: 'include',
+  //   }).then(response => {
+  //     response.json().then(userInfo => {
+  //       setUserInfo(userInfo);
+  //     });
+  //   })
+  // }
 
   useEffect(() => {
     fetch('http://localhost:3030/profile', {
@@ -39,7 +50,6 @@ const Header = () => {
       .catch(error => console.error('Error fetching profile photo:', error));
   };
 
-  const username = userInfo?.username;
   const tags = userInfo?.tags;
 
   const isAdmin = tags?.includes('admin');

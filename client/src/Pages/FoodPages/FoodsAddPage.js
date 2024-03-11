@@ -67,6 +67,7 @@ const FoodsAddPage = () => {
             type="number"
             min={1}
             max={5}
+            defaultValue={3}
             required
             value={healthy}
             onChange={e => setHealthy(e.target.value)}
@@ -75,9 +76,17 @@ const FoodsAddPage = () => {
             <label>Food Type:</label>
             <select
             value={foodType}
+            defaultValue={'meyve'}
             onChange={e => setFoodType(e.target.value)}>
-                <option value="sulu">Sulu</option>
-                <option value="katı">Katı</option>
+                <option value="">Seçiniz</option>
+                <option value="meyve">Meyve</option>
+                <option value="sebze">Sebze</option>
+                <option value="içecek">İçecek</option>
+                <option value="tatlı">Tatlı</option>
+                <option value="kahvaltılık">Kahvaltılık</option>
+                <option value="sos">Sos</option>
+                <option value="salata">Salata</option>
+                <option value="çorba">Çorba</option>
             </select>
 
             <label>Food Image:</label>

@@ -240,7 +240,8 @@ app.get('/darkmode', async (req, res) => {
 app.get('/search/:keyword', async (req, res) => {
     const {keyword} = req.params;
     const foodDoc = await FoodModel.find({name: {$regex: keyword, $options: 'i'}});
-    res.json(foodDoc);
+    const mealDoc = await MealModel.find({name: {$regex: keyword, $options: 'i'}});
+    res.json([...foodDoc, ...mealDoc]);
 });
 
 //? Tags
@@ -330,6 +331,47 @@ app.post('/food', uploadMiddleware.single('file'), async (req, res) => {
             image: url,
         });
         res.json(foodDoc);
+    });
+});
+
+
+app.get('/meal', async (req, res) => {
+    res.json(
+        await MealModel.find()
+    );
+});
+
+app.get('/meal/:id', async (req, res) => {
+    const {id} = req.params;
+    const mealDoc = await MealModel.findById(id);
+    res.json(mealDoc);
+});
+
+app.post('/meal', uploadMiddleware.single('file'), async (req, res) => {
+    const cover = [];
+    const {originalname,path,mimetype} = req.file;
+    const url = await uploadToS3(path, originalname, mimetype);
+    cover.push(url);
+
+    const {token} = req.cookies;
+    jwt.verify(token, secret, {}, async (err, info) => {
+        if(err) throw err;
+
+        const {id, name, summary, description, calories, healthy, foodTags, foodTaste, foodTemp, foodType, foodMethod} = req.body;
+        const mealDoc = await MealModel.create({
+            name,
+            summary,
+            description,
+            calories,
+            healthy,
+            foodTags,
+            foodTaste,
+            foodTemp,
+            foodType,
+            foodMethod,
+            image: url,
+        });
+        res.json(mealDoc);
     });
 });
 

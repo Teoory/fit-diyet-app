@@ -6,6 +6,10 @@ const MealSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a name']
     },
+    summary: {
+        type: String,
+        required: [true, 'Please provide a summary']
+    },
     description: {
         type: String,
         required: [true, 'Please provide a description']
@@ -46,19 +50,21 @@ const MealSchema = new mongoose.Schema({
     foodType: {
         type: String,
         required: [true, 'Please provide a foodType'],
-        enum: ['sulu', 'katı'],
-        default: 'sulu'
+        enum: ['tavuk', 'kırmızı et', 'balık', 'pilav', 'makarna', 'sebze', 'diger'],
+        default: 'diger'
     },
     foodMethod: {
         type: String,
         required: [true, 'Please provide a foodMethod'],
-        enum: ['kızartma', 'haşlama', 'fırın', 'ızgara', 'sote', 'dizme', 'buğulama', 'çiğ'],
+        enum: ['kızartma', 'haşlama', 'fırın', 'ızgara', 'sote', 'dizme', 'buğulama', 'çiğ', 'çorba'],
         default: 'kızartma'
     },
     createdAt: {
         type: Date,
         default: Date.now
     }
+}, {
+    timestamps: true,
 });
 
 const MealModel = model('Meal', MealSchema);

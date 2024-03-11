@@ -28,9 +28,9 @@ const FoodSchema = new mongoose.Schema({
     foodType: {
         type: String,
         required: [true, 'Please provide a foodType'],
-        enum: ['sulu', 'katı'],
-        default: 'sulu'
-    }
+        enum: ['meyve', 'sebze', 'içecek', 'tatlı', 'kahvaltılık', 'sos', 'salata', 'çorba'],
+        default: 'meyve'
+    },
 });
 
 const FoodModel = model('Food', FoodSchema);

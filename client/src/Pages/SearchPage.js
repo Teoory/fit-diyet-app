@@ -27,13 +27,13 @@ const SearchPage = () => {
             <SearchBox onSearch={handleSearch} />
             <div>
                 {searchResults.slice(minSearchResults, maxSearchResults).map((result) => (
-                    <Link style={{textDecoration: "none"}} to={"/food/"+result._id} key={result._id}>
+                    <Link style={{textDecoration: "none"}} to={result.foodTemp === undefined ? `/food/${result._id}` : `/meal/${result._id}`} key={result._id}>
                         <div className="post">
                             <div className="image">
                                 <Image src={result.image} alt="img" loading='layz' decoding='async' />
                             </div>
                             <div className="text">
-                                <Link to={`/food/${result._id}`}>
+                                <Link to={result.foodTemp === undefined ? `/food/${result._id}` : `/meal/${result._id}`}>
                                     <h1>{result.name}</h1>
                                     <p className="info">
                                         <time>
@@ -41,8 +41,8 @@ const SearchPage = () => {
                                         </time>
                                     </p>
                                 </Link>
-                                <Link to={`/food/${result._id}`}>
-                                    <p className="summary">{result.description}</p>
+                                <Link to={result.foodTemp === undefined ? `/food/${result._id}` : `/meal/${result._id}`}>
+                                    {result.foodTemp === undefined ? <p className="summary">{result.description}</p> : <p className="summary">{result.summary}</p>}
                                 </Link>
                             </div> 
                         </div>                        

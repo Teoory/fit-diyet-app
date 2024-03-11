@@ -11,6 +11,9 @@ import DinnerPage from '../Pages/FoodPages/DinnerPage';
 import LaunchPage from '../Pages/FoodPages/LaunchPage';
 import SnackPage from '../Pages/FoodPages/SnackPage';
 
+import FoodsPage from '../Pages/FoodPages/FoodsPage';
+import MealsPage from '../Pages/FoodPages/MealsPage';
+
 const PublicRoutes = () => {
   return (
     <Routes>
@@ -21,6 +24,9 @@ const PublicRoutes = () => {
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/register" element={<RegisterPage/>} />
       
+      <Route path="/food/:id" element={<FoodsPage />} />
+      <Route path="/meal/:id" element={<MealsPage />} />
+
       <Route path="/launch" element={<LaunchPage/>} />
       <Route path="/breakfast" element={<BreakfastPage/>} />
       <Route path="/dinner" element={<DinnerPage/>} />

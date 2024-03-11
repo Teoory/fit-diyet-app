@@ -12,6 +12,7 @@
   --color-white2: #ddd;
   --color-black: #000;
   --color-dark: #212121;
+  --color-dark2: #212121;
   --color-dark-varient: #333;
   --color-light: rgba(124, 118, 118, 0.5);
   --color-dark-light: rgba(0, 0, 0, 0.65);
@@ -151,7 +152,8 @@ span.PostTagsAreaAll {
   align-self: center;
 }
 
-div.post p.info {
+div.post p.info,
+div.post p.info2{
   margin: 6px 0;
   color: var(--color-text-secondary);
   font-size: .7rem;
@@ -196,7 +198,7 @@ div.PostTags span {
   text-align: center;
 }
 
-div.text span {
+div.text span{
   background-color: var(--color-warning);
   color: var(--color-black);
   padding: 5px 10px;
@@ -205,11 +207,13 @@ div.text span {
   font-weight: bold;
 }
 
-div.text h1 {
+div.text h1,
+div.text2 h1{
   margin: 0;
 }
 
-div.foods p.info {
+div.foods p.info,
+div.foods p.info2{
   margin: 6px 0;
   color: var(--color-text-secondary);
   font-size: .7rem;
@@ -217,6 +221,7 @@ div.foods p.info {
   display: flex;
   gap: 10px;
 }
+
 
 div.allFoods {
   width: 300px;
@@ -229,11 +234,31 @@ div.allFoods {
   margin-bottom: 25px;
 }
 
-div.allFoods div.text {
+.selecteditem {
+  color: var(--color-primary);
+  font-size: .7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  filter: brightness(0.5);
+}
+
+div.allFoods div.text,
+div.allFoods div.text2 {
   padding: 10px;
   border: 1px solid rgba(155,155,155,.2);
   border-radius: 0 0 15px 15px;
-  height: 170px;
+  height: 180px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+div.allFoods div.text {
+  height: 100px !important;
+}
+
+div.allFoods div.text a:first-child {
+  border-bottom: 1px solid #00000020;
 }
 
 div.allPosts div.image img{
@@ -272,6 +297,18 @@ div.allFoods div.text a {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+div.allFoods div.text2 a:first-child::after{
+  content: '';
+  border-bottom: 1px solid #00000020;
+}
+
+div.allFoods div.text2 a {
+  text-decoration: none;
+  display: grid;
+  justify-content: space-between;
 }
 
 div.allFoods p.info {
@@ -280,6 +317,15 @@ div.allFoods p.info {
   font-size: .7rem;
   font-weight: bold;
   display: grid;
+}
+
+div.allFoods p.info2 {
+  margin: 6px 0;
+  color: var(--color-text-secondary);
+  font-size: .7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 30px;
 }
 
 div.allFoods p.summary {
@@ -353,9 +399,10 @@ select {
 button {
   width: 100%;
   display: block;
-  background-color: var(--color-dark-varient);
+  background-color: var(--color-success);
+  font-weight: 900;
   border: 0;
-  color: var(--color-white);
+  color: var(--color-dark2);
   border-radius: 5px;
   padding: 7px 0;
   cursor: pointer;

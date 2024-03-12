@@ -74,6 +74,14 @@ main {
   height: 100vh;
 }
 
+.success {
+  background-color: var(--color-success);
+}
+
+.danger {
+  background-color: var(--color-danger);
+}
+
 .content {
   padding: 0;
   margin: 0 auto;
@@ -383,6 +391,25 @@ div.allFoods p.summary::first-letter {
   font-size: x-large;
 }
 
+.menuArea {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.addMenuButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.totalBreakfast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Login & Register Css */
 input,

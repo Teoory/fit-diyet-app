@@ -56,7 +56,7 @@ const MealSchema = new mongoose.Schema({
     foodMethod: {
         type: String,
         required: [true, 'Please provide a foodMethod'],
-        enum: ['kızartma', 'haşlama', 'fırın', 'ızgara', 'sote', 'dizme', 'buğulama', 'çiğ', 'çorba'],
+        enum: ['kızartma', 'haşlama', 'fırın', 'ızgara', 'sote', 'dizme', 'buğulama', 'çiğ', 'çorba', 'salata'],
         default: 'kızartma'
     },
     createdAt: {

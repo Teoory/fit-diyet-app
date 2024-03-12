@@ -32,3 +32,4 @@ Total code lines: https://api.github.com/repos/Teoory/fit-diyet-app/languages
   - Menudeki ürünlerin toplam kalori hesabı
 - Ana Sayfa düzeni
 - Yemeklerin ve yiyeceklerin sayfası
+- Arama sayfası

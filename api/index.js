@@ -3,6 +3,7 @@ const mongoose = require ('mongoose');
 const User = require ('./models/User');
 const FoodModel = require ('./models/FoodModel');
 const MealModel = require ('./models/MealModel');
+const MenuModel = require ('./models/MenuModel');
 
 const express = require ('express');
 const bcrypt = require ('bcryptjs');
@@ -298,7 +299,7 @@ app.post('/changeTag', async (req, res) => {
 
 
 
-//? Food
+//? Tekil yiyecekler
 app.get('/food', async (req, res) => {
     res.json(
         await FoodModel.find()
@@ -334,7 +335,7 @@ app.post('/food', uploadMiddleware.single('file'), async (req, res) => {
     });
 });
 
-
+//? Ana Yemek
 app.get('/meal', async (req, res) => {
     res.json(
         await MealModel.find()
@@ -375,6 +376,36 @@ app.post('/meal', uploadMiddleware.single('file'), async (req, res) => {
     });
 });
 
+//? Menü
+app.get('/menu', async (req, res) => {
+    res.json(
+        await MenuModel.find()
+    );
+});
+
+app.get('/menu/:id', async (req, res) => {
+    const {id} = req.params;
+    const menuDoc = await MenuModel.findById(id);
+    res.json(menuDoc);
+});
+
+app.post('/menu', async (req, res) => {
+    const {token} = req.cookies;
+    jwt.verify(token, secret, {}, async (err, info) => {
+        if(err) throw err;
+
+        const {menuType, menuMeal, menuSoap, menuDrink, menuFruit, menuSalad} = req.body;
+        const menuDoc = await MenuModel.create({
+            menuType,
+            menuMeal,
+            menuSoap,
+            menuDrink,
+            menuFruit,
+            menuSalad,
+        });
+        res.json(menuDoc);
+    });
+});
 
 
 

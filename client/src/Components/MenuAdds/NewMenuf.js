@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Image from '../Image';
 
-const NewMenuf = ({_id, food}) => {
-    const { name, description, calories, healthy, foodType, image } = food;
+const NewMenuf = ({food}) => {
+    const { _id, name, description, calories, healthy, foodType, image } = food;
     return (
         <div className="allFoods">
             <div className="image">

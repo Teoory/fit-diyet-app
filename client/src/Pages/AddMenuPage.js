@@ -94,7 +94,7 @@ const AddMenuPage = () => {
                       {newFood >= 1 && <button className='danger' onClick={removeFood}>Kahvaltılık azalt</button>}
                       {/* <button className='danger' onClick={removeFood}>Kahvaltılık azalt</button> */}
                     </div>
-                {newFood > 0 && <label className='totalBreakfast'>Kahvaltılık Sayısı: {newFood}</label>}
+                {newFood > 0 && <label className='totalBreakfast'>Kahvaltılık Sayısı: {newFood+1}</label>}
                     {[...Array(newFood)].map((_, i) => (
                       <div key={i}>
                         <label>Kahvaltılık Seçimi:</label>

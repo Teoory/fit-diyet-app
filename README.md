@@ -40,7 +40,8 @@ Total code lines: https://api.github.com/repos/Teoory/fit-diyet-app/languages
 -----
 ![localhost_3000_addmenu](https://github.com/Teoory/fit-diyet-app/assets/59116823/eec111fc-bcab-4e56-a66e-236b45737730)
 -----
-![localhost_3000_addmenu (1)](https://github.com/Teoory/fit-diyet-app/assets/59116823/8a7c7411-4369-4bf9-9349-35a6331e0e07)
+![localhost_3000_addmenu (1)](https://github.com/Teoory/fit-diyet-app/assets/59116823/64cdc6c7-f7fd-43e5-92d1-c2b15dcd5ce0)
+
 -----
 ![localhost_3000_foodadd](https://github.com/Teoory/fit-diyet-app/assets/59116823/758b2e7a-1094-4a5f-9562-1d7012c7c30a)
 -----

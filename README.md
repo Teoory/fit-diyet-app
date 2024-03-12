@@ -32,4 +32,20 @@ Total code lines: https://api.github.com/repos/Teoory/fit-diyet-app/languages
   - Menudeki ürünlerin toplam kalori hesabı
 - Ana Sayfa düzeni
 - Yemeklerin ve yiyeceklerin sayfası
-- Arama sayfası
+
+
+### Ekran görüntüleri
+![localhost_3000_addmenu](https://github.com/Teoory/fit-diyet-app/assets/59116823/003a28d9-b917-4f91-ad0c-95bd0429f617)
+-----
+![localhost_3000_addmenu](https://github.com/Teoory/fit-diyet-app/assets/59116823/eec111fc-bcab-4e56-a66e-236b45737730)
+-----
+![localhost_3000_addmenu (1)](https://github.com/Teoory/fit-diyet-app/assets/59116823/8a7c7411-4369-4bf9-9349-35a6331e0e07)
+-----
+![localhost_3000_foodadd](https://github.com/Teoory/fit-diyet-app/assets/59116823/758b2e7a-1094-4a5f-9562-1d7012c7c30a)
+-----
+![localhost_3000_mealsadd](https://github.com/Teoory/fit-diyet-app/assets/59116823/6e768ab0-597c-4920-ae82-1d7fd335e756)
+-----
+![localhost_3000_](https://github.com/Teoory/fit-diyet-app/assets/59116823/90a14d6e-db19-4c44-817c-2b91b73f3b19)
+-----
+
+

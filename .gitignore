@@ -1,6 +1,7 @@
 *.idea
 *api/uploads/*
 .env
+*.env
 
 api/profilePhotos/*
 
